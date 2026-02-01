@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Actions - Abadé</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest-deep: #1a3a2e;
+            --moss-green: #4a7c59;
+            --sun-gold: #f4a261;
+            --earth-brown: #8b4513;
+            --sky-blue: #a8dadc;
+            --cream: #faf8f3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--cream);
+            color: var(--forest-deep);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Crimson Pro', serif;
+            font-weight: 700;
+        }
+
+        .activity-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-8px) rotate(-1deg);
+            box-shadow: 0 20px 40px rgba(26, 58, 46, 0.15);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--moss-green), var(--forest-deep));
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(74, 124, 89, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(74, 124, 89, 0.4);
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--cream);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--moss-green);
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--forest-deep);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="relative z-10 px-6 py-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-3xl">🌲</span>
+                <h1 class="text-2xl font-bold text-forest-deep" style="color: var(--forest-deep);">
+                    <a href="index.html">Abadé</a>
+                </h1>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="qui-sommes-nous.html" class="text-forest-deep hover:text-moss-green transition-colors font-medium">Qui sommes-nous?</a>
+                <a href="nos-actions.html" class="text-forest-deep hover:text-moss-green transition-colors font-medium" style="color: var(--moss-green);">Nos actions</a>
+                <a href="agenda.html" class="text-forest-deep hover:text-moss-green transition-colors font-medium">Agenda</a>
+                <a href="nous-soutenir.html" class="text-forest-deep hover:text-moss-green transition-colors font-medium">Nous soutenir</a>
+            </div>
+            <button class="md:hidden text-forest-deep">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 px-6" style="background: linear-gradient(135deg, var(--moss-green), var(--forest-deep));">
+        <div class="max-w-6xl mx-auto text-center text-white">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                Nos Actions
+            </h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
+                Des programmes variés pour tous les âges, conçus pour éveiller la curiosité et l'amour de la nature.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Programs Section -->
+    <section class="relative py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6" style="color: var(--forest-deep);">
+                    Nos Programmes Principaux
+                </h2>
+                <p class="text-xl max-w-3xl mx-auto" style="color: var(--forest-deep); opacity: 0.8;">
+                    Des aventures saisonnières conçues pour différents âges et centres d'intérêt, toutes ancrées dans l'apprentissage expérientiel et l'exploration en plein air.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+                <div class="activity-card bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="text-6xl mb-6">🏕️</div>
+                    <h3 class="text-2xl font-bold mb-4" style="color: var(--forest-deep);">École en Forêt</h3>
+                    <p class="mb-6" style="color: var(--forest-deep); opacity: 0.8;">
+                        Des séances hebdomadaires où les enfants construisent des abris, suivent la faune et apprennent des compétences primitives dans notre classe en plein air.
+                    </p>
+                    <div class="mb-6">
+                        <h4 class="font-bold mb-2" style="color: var(--moss-green);">Au programme:</h4>
+                        <ul class="list-disc list-inside space-y-1 text-sm" style="color: var(--forest-deep); opacity: 0.8;">
+                            <li>Construction d'abris naturels</li>
+                            <li>Identification de la flore et faune locale</li>
+                            <li>Techniques de survie douce</li>
+                            <li>Jeux coopératifs en nature</li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm font-semibold" style="color: var(--moss-green);">Âges 5-12 ans</span>
+                        <span class="text-sm font-semibold" style="color: var(--forest-deep); opacity: 0.6;">Tous les mercredis</span>
+                    </div>
+                </div>
+
+                <div class="activity-card bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="text-6xl mb-6">🌾</div>
+                    <h3 class="text-2xl font-bold mb-4" style="color: var(--forest-deep);">Camps Saisonniers</h3>
+                    <p class="mb-6" style="color: var(--forest-deep); opacity: 0.8;">
+                        Des immersions intensives d'une semaine pendant les vacances scolaires, avec camping, randonnée et artisanat nature.
+                    </p>
+                    <div class="mb-6">
+                        <h4 class="font-bold mb-2" style="color: var(--moss-green);">Au programme:</h4>
+                        <ul class="list-disc list-inside space-y-1 text-sm" style="color: var(--forest-deep); opacity: 0.8;">
+                            <li>Bivouac et nuit sous les étoiles</li>
+                            <li>Randonnées et orientation</li>
+                            <li>Artisanat avec matériaux naturels</li>
+                            <li>Cuisine sur feu de camp</li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm font-semibold" style="color: var(--moss-green);">Âges 6-15 ans</span>
+                        <span class="text-sm font-semibold" style="color: var(--forest-deep); opacity: 0.6;">Vacances scolaires</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Activities -->
+    <section class="relative py-24 px-6" style="background: linear-gradient(to bottom, var(--cream), #e8f5e3);">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6" style="color: var(--forest-deep);">
+                    Activités Complémentaires
+                </h2>
+                <p class="text-xl max-w-3xl mx-auto" style="color: var(--forest-deep); opacity: 0.8;">
+                    Des ateliers thématiques et événements spéciaux tout au long de l'année.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-3xl p-6 shadow-lg">
+                    <div class="text-5xl mb-4">🦋</div>
+                    <h3 class="text-xl font-bold mb-3" style="color: var(--forest-deep);">Ateliers Nature</h3>
+                    <p class="text-sm mb-4" style="color: var(--forest-deep); opacity: 0.8;">
+                        Ateliers thématiques mensuels : observation des oiseaux, herbier, land art, astronomie...
+                    </p>
+                    <span class="text-xs font-semibold" style="color: var(--moss-green);">Un samedi par mois</span>
+                </div>
+
+                <div class="bg-white rounded-3xl p-6 shadow-lg">
+                    <div class="text-5xl mb-4">👨‍👩‍👧‍👦</div>
+                    <h3 class="text-xl font-bold mb-3" style="color: var(--forest-deep);">Sorties Famille</h3>
+                    <p class="text-sm mb-4" style="color: var(--forest-deep); opacity: 0.8;">
+                        Des aventures nature pour toute la famille : randonnées guidées, cueillette sauvage, bivouac familial...
+                    </p>
+                    <span class="text-xs font-semibold" style="color: var(--moss-green);">Événements trimestriels</span>
+                </div>
+
+                <div class="bg-white rounded-3xl p-6 shadow-lg">
+                    <div class="text-5xl mb-4">📚</div>
+                    <h3 class="text-xl font-bold mb-3" style="color: var(--forest-deep);">Formation Parents</h3>
+                    <p class="text-sm mb-4" style="color: var(--forest-deep); opacity: 0.8;">
+                        Ateliers pour les parents souhaitant intégrer plus de nature dans le quotidien familial.
+                    </p>
+                    <span class="text-xs font-semibold" style="color: var(--moss-green);">Sessions bimensuelles</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="relative py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6" style="color: var(--forest-deep);">
+                    Notre Approche Pédagogique
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-3" style="color: var(--moss-green);">🌱 Apprentissage par l'expérience</h3>
+                        <p style="color: var(--forest-deep); opacity: 0.8;">
+                            Les enfants apprennent en faisant, en touchant, en expérimentant. Chaque activité est une opportunité de découverte active.
+                        </p>
+                    </div>
+
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-3" style="color: var(--moss-green);">🎯 Pédagogie individualisée</h3>
+                        <p style="color: var(--forest-deep); opacity: 0.8;">
+                            Nous respectons le rythme et les intérêts de chaque enfant, favorisant leur développement naturel et leur confiance en soi.
+                        </p>
+                    </div>
+
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-3" style="color: var(--moss-green);">🔄 Connexion aux cycles naturels</h3>
+                        <p style="color: var(--forest-deep); opacity: 0.8;">
+                            Nos programmes suivent les saisons, permettant aux enfants de vivre et comprendre les rythmes de la nature.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6 text-center" style="color: var(--forest-deep);">Bénéfices pour les enfants</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3">✨</span>
+                            <span style="color: var(--forest-deep); opacity: 0.8;">Développement de la confiance en soi et de l'autonomie</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3">🧠</span>
+                            <span style="color: var(--forest-deep); opacity: 0.8;">Stimulation de la créativité et de l'imagination</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3">💚</span>
+                            <span style="color: var(--forest-deep); opacity: 0.8;">Connexion profonde avec la nature</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3">🤸</span>
+                            <span style="color: var(--forest-deep); opacity: 0.8;">Amélioration de la motricité et de la coordination</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3">👥</span>
+                            <span style="color: var(--forest-deep); opacity: 0.8;">Renforcement des compétences sociales et de coopération</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-20 px-6" style="background: linear-gradient(135deg, var(--moss-green), var(--forest-deep));">
+        <div class="max-w-4xl mx-auto text-center text-white">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                Prêt à explorer?
+            </h2>
+            <p class="text-xl mb-8 opacity-90">
+                Inscrivez votre enfant à une séance d'essai gratuite et découvrez la magie de l'apprentissage en nature.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="agenda.html">
+                    <button class="btn-primary">Voir l'agenda</button>
+                </a>
+                <a href="index.html#contact">
+                    <button class="px-8 py-4 bg-white rounded-full font-semibold transition-all hover:bg-opacity-90"
+                            style="color: var(--forest-deep);">
+                        Nous contacter
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative py-12 px-6" style="background: var(--forest-deep); color: white;">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-12 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-3xl">🌲</span>
+                        <h3 class="text-2xl font-bold">Abadé</h3>
+                    </div>
+                    <p class="opacity-80">Grandir libre, apprendre dehors depuis 2020.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Liens Rapides</h4>
+                    <ul class="space-y-2 opacity-80">
+                        <li><a href="qui-sommes-nous.html" class="hover:underline">Qui sommes-nous?</a></li>
+                        <li><a href="nos-actions.html" class="hover:underline">Nos actions</a></li>
+                        <li><a href="agenda.html" class="hover:underline">Agenda</a></li>
+                        <li><a href="nous-soutenir.html" class="hover:underline">Nous soutenir</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 opacity-80">
+                        <li>📧 contact@abade.org</li>
+                        <li>📞 +33 (0)1 23 45 67 89</li>
+                        <li>📍 Région Parisienne, France</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white border-opacity-20 pt-8 text-center opacity-60">
+                <p>&copy; 2026 Abadé. Tous droits réservés. Créé avec soin pour la nature et les enfants.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

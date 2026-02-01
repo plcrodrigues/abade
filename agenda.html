@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda - Abadé</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest-deep: #1a3a2e;
+            --moss-green: #4a7c59;
+            --sun-gold: #f4a261;
+            --earth-brown: #8b4513;
+            --sky-blue: #a8dadc;
+            --cream: #faf8f3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--cream);
+            color: var(--forest-deep);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Crimson Pro', serif;
+            font-weight: 700;
+        }
+
+        .event-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(26, 58, 46, 0.15);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--moss-green), var(--forest-deep));
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(74, 124, 89, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(74, 124, 89, 0.4);
+        }
+
+        .month-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--cream);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--moss-green);
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--forest-deep);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="relative z-10 px-6 py-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-3xl">🌲</span>
+                <h1 class="text-2xl font-bold text-forest-deep" style="color: var(--forest-deep);">
+                    <a href="index.html">Abadé</a>
+                </h1>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="qui-sommes-nous.html" class="text-forest-deep hover:text-moss-green transition-colors font-medium">Qui sommes-nous?</a>
+                <a href="nos-actions.html" class="text-forest-deep hover:text-moss-green transition-colors font-medium">Nos actions</a>
+                <a href="agenda.html" class="text-forest-deep hover:text-moss-green transition-colors font-medium" style="color: var(--moss-green);">Agenda</a>
+                <a href="nous-soutenir.html" class="text-forest-deep hover:text-moss-green transition-colors font-medium">Nous soutenir</a>
+            </div>
+            <button class="md:hidden text-forest-deep">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 px-6" style="background: linear-gradient(135deg, var(--moss-green), var(--forest-deep));">
+        <div class="max-w-6xl mx-auto text-center text-white">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                Agenda
+            </h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
+                Découvrez nos prochaines activités et événements nature pour toute la famille.
+            </p>
+        </div>
+    </section>
+
+    <!-- February Events -->
+    <section class="relative py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-12">
+                <h2 class="text-4xl font-bold mb-2" style="color: var(--forest-deep);">Février 2026</h2>
+                <p style="color: var(--forest-deep); opacity: 0.6;">Découvertes hivernales</p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="event-card bg-white rounded-3xl p-6 shadow-lg">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                        <div class="flex-shrink-0 text-center">
+                            <div class="w-20 h-20 rounded-2xl flex flex-col items-center justify-center text-white mb-2"
+                                 style="background: linear-gradient(135deg, var(--moss-green), var(--forest-deep));">
+                                <span class="text-2xl font-bold">05</span>
+                                <span class="text-xs uppercase">Fév</span>
+                            </div>
+                            <span class="month-badge" style="background: var(--sky-blue); color: var(--forest-deep);">Mercredi</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold mb-2" style="color: var(--forest-deep);">École en Forêt 🏕️</h3>
+                            <p class="mb-3" style="color: var(--forest-deep); opacity: 0.8;">
+                                Construction d'igloos et traces d'animaux dans la neige. Découverte des adaptations hivernales de la faune.
+                            </p>
+                            <div class="flex flex-wrap gap-3 text-sm">
+                                <span style="color: var(--moss-green);">📅 14h00 - 17h00</span>
+                                <span style="color: var(--moss-green);">👥 5-12 ans</span>
+                                <span style="color: var(--moss-green);">📍 Forêt de Fontainebleau</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary self-center md:self-start">S'inscrire</button>
+                    </div>
+                </div>
+
+                <div class="event-card bg-white rounded-3xl p-6 shadow-lg">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                        <div class="flex-shrink-0 text-center">
+                            <div class="w-20 h-20 rounded-2xl flex flex-col items-center justify-center text-white mb-2"
+                                 style="background: linear-gradient(135deg, var(--sun-gold), var(--earth-brown));">
+                                <span class="text-2xl font-bold">08</span>
+                                <span class="text-xs uppercase">Fév</span>
+                            </div>
+                            <span class="month-badge" style="background: #ffd9c0; color: var(--forest-deep);">Samedi</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold mb-2" style="color: var(--forest-deep);">Atelier Nature: Oiseaux d'Hiver 🦋</h3>
+                            <p class="mb-3" style="color: var(--forest-deep); opacity: 0.8;">
+                                Observation et identification des oiseaux hivernants. Construction de mangeoires écologiques.
+                            </p>
+                            <div class="flex flex-wrap gap-3 text-sm">
+                                <span style="color: var(--moss-green);">📅 10h00 - 12h30</span>
+                                <span style="color: var(--moss-green);">👥 Tous âges</span>
+                                <span style="color: var(--moss-green);">📍 Parc de Sceaux</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary self-center md:self-start">S'inscrire</button>
+                    </div>
+                </div>
+
+                <div class="event-card bg-white rounded-3xl p-6 shadow-lg">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                        <div class="flex-shrink-0 text-center">
+                            <div class="w-20 h-20 rounded-2xl flex flex-col items-center justify-center text-white mb-2"
+                                 style="background: linear-gradient(135deg, var(--moss-green), var(--forest-deep));">
+                                <span class="text-2xl font-bold">12</span>
+                                <span class="text-xs uppercase">Fév</span>
+                            </div>
+                            <span class="month-badge" style="background: var(--sky-blue); color: var(--forest-deep);">Mercredi</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold mb-2" style="color: var(--forest-deep);">École en Forêt 🏕️</h3>
+                            <p class="mb-3" style="color: var(--forest-deep); opacity: 0.8;">
+                                Initiation au feu par friction et cuisine sauvage hivernale. Jeux traditionnels en plein air.
+                            </p>
+                            <div class="flex flex-wrap gap-3 text-sm">
+                                <span style="color: var(--moss-green);">📅 14h00 - 17h00</span>
+                                <span style="color: var(--moss-green);">👥 5-12 ans</span>
+                                <span style="color: var(--moss-green);">📍 Bois de Vincennes</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary self-center md:self-start">S'inscrire</button>
+                    </div>
+                </div>
+
+                <div class="event-card bg-white rounded-3xl p-6 shadow-lg">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                        <div class="flex-shrink-0 text-center">
+                            <div class="w-20 h-20 rounded-2xl flex flex-col items-center justify-center"
+                                 style="background: linear-gradient(135deg, #e8f5e3, #c8e6c9); color: var(--forest-deep);">
+                                <span class="text-2xl font-bold">15-21</span>
+                                <span class="text-xs uppercase">Fév</span>
+                            </div>
+                            <span class="month-badge" style="background: #ffecb3; color: var(--forest-deep);">Vacances</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold mb-2" style="color: var(--forest-deep);">Camp d'Hiver 🌾</h3>
+                            <p class="mb-3" style="color: var(--forest-deep); opacity: 0.8;">
+                                Semaine d'immersion complète: bivouac, randonnée en raquettes, sculpture sur neige, astronomie nocturne et bien plus!
+                            </p>
+                            <div class="flex flex-wrap gap-3 text-sm">
+                                <span style="color: var(--moss-green);">📅 7 jours / 6 nuits</span>
+                                <span style="color: var(--moss-green);">👥 8-15 ans</span>
+                                <span style="color: var(--moss-green);">📍 Vosges</span>
+                                <span style="color: var(--earth-brown); font-weight: 600;">⚠️ Places limitées</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary self-center md:self-start">S'inscrire</button>
+                    </div>
+                </div>
+
+                <div class="event-card bg-white rounded-3xl p-6 shadow-lg">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                        <div class="flex-shrink-0 text-center">
+                            <div class="w-20 h-20 rounded-2xl flex flex-col items-center justify-center text-white mb-2"
+                                 style="background: linear-gradient(135deg, var(--moss-green), var(--forest-deep));">
+                                <span class="text-2xl font-bold">26</span>
+                                <span class="text-xs uppercase">Fév</span>
+                            </div>
+                            <span class="month-badge" style="background: var(--sky-blue); color: var(--forest-deep);">Mercredi</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold mb-2" style="color: var(--forest-deep);">École en Forêt 🏕️</h3>
+                            <p class="mb-3" style="color: var(--forest-deep); opacity: 0.8;">
+                                Premiers signes du printemps: bourgeonnement des arbres, réveil de la nature, land art avec éléments naturels.
+                            </p>
+                            <div class="flex flex-wrap gap-3 text-sm">
+                                <span style="color: var(--moss-green);">📅 14h00 - 17h00</span>
+                                <span style="color: var(--moss-green);">👥 5-12 ans</span>
+                                <span style="color: var(--moss-green);">📍 Forêt de Rambouillet</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary self-center md:self-start">S'inscrire</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- March Preview -->
+    <section class="relative py-24 px-6" style="background: linear-gradient(to bottom, var(--cream), #e8f5e3);">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-12">
+                <h2 class="text-4xl font-bold mb-2" style="color: var(--forest-deep);">Mars 2026</h2>
+                <p style="color: var(--forest-deep); opacity: 0.6;">Éveil du printemps</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-3xl p-6 shadow-lg">
+                    <span class="month-badge mb-3 inline-block" style="background: var(--sky-blue); color: var(--forest-deep);">Tous les mercredis</span>
+                    <h3 class="text-xl font-bold mb-2" style="color: var(--forest-deep);">École en Forêt 🏕️</h3>
+                    <p class="text-sm" style="color: var(--forest-deep); opacity: 0.8;">
+                        Séances hebdomadaires: découverte des fleurs printanières, nidification, jardinage sauvage...
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-6 shadow-lg">
+                    <span class="month-badge mb-3 inline-block" style="background: #ffd9c0; color: var(--forest-deep);">Sam 22 Mars</span>
+                    <h3 class="text-xl font-bold mb-2" style="color: var(--forest-deep);">Sortie Famille: Équinoxe 👨‍👩‍👧‍👦</h3>
+                    <p class="text-sm" style="color: var(--forest-deep); opacity: 0.8;">
+                        Célébration de l'équinoxe de printemps avec randonnée, pique-nique et activités nature pour toute la famille.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-6 shadow-lg">
+                    <span class="month-badge mb-3 inline-block" style="background: #ffd9c0; color: var(--forest-deep);">Sam 15 Mars</span>
+                    <h3 class="text-xl font-bold mb-2" style="color: var(--forest-deep);">Atelier: Plantes Médicinales 🦋</h3>
+                    <p class="text-sm" style="color: var(--forest-deep); opacity: 0.8;">
+                        Introduction aux plantes médicinales locales et préparation de remèdes naturels simples.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-6 shadow-lg">
+                    <span class="month-badge mb-3 inline-block" style="background: #d4e9d7; color: var(--forest-deep);">Dim 23 Mars</span>
+                    <h3 class="text-xl font-bold mb-2" style="color: var(--forest-deep);">Formation Parents 📚</h3>
+                    <p class="text-sm" style="color: var(--forest-deep); opacity: 0.8;">
+                        "Intégrer la nature au quotidien familial" - Atelier pratique pour parents.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practical Info -->
+    <section class="relative py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-6" style="color: var(--forest-deep);">Informations Pratiques</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-3xl p-6 shadow-lg text-center">
+                    <div class="text-5xl mb-4">📝</div>
+                    <h3 class="text-xl font-bold mb-3" style="color: var(--forest-deep);">Inscriptions</h3>
+                    <p class="text-sm mb-4" style="color: var(--forest-deep); opacity: 0.8;">
+                        Les inscriptions se font en ligne ou par email. Places limitées, réservez tôt!
+                    </p>
+                    <a href="index.html#contact">
+                        <button class="text-sm font-semibold hover:underline" style="color: var(--moss-green);">Nous contacter →</button>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-3xl p-6 shadow-lg text-center">
+                    <div class="text-5xl mb-4">🎒</div>
+                    <h3 class="text-xl font-bold mb-3" style="color: var(--forest-deep);">Équipement</h3>
+                    <p class="text-sm mb-4" style="color: var(--forest-deep); opacity: 0.8;">
+                        Vêtements adaptés à la météo, chaussures de marche, gourde, pique-nique. Liste détaillée envoyée après inscription.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-6 shadow-lg text-center">
+                    <div class="text-5xl mb-4">💰</div>
+                    <h3 class="text-xl font-bold mb-3" style="color: var(--forest-deep);">Tarifs</h3>
+                    <p class="text-sm mb-4" style="color: var(--forest-deep); opacity: 0.8;">
+                        Tarifs variables selon l'activité. Tarifs réduits pour membres et familles. Première séance d'essai gratuite!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-20 px-6" style="background: linear-gradient(135deg, var(--moss-green), var(--forest-deep));">
+        <div class="max-w-4xl mx-auto text-center text-white">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                Envie de participer?
+            </h2>
+            <p class="text-xl mb-8 opacity-90">
+                Contactez-nous pour inscrire votre enfant ou pour plus d'informations sur nos activités.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#contact">
+                    <button class="btn-primary">Nous contacter</button>
+                </a>
+                <a href="nous-soutenir.html">
+                    <button class="px-8 py-4 bg-white rounded-full font-semibold transition-all hover:bg-opacity-90"
+                            style="color: var(--forest-deep);">
+                        Devenir membre
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative py-12 px-6" style="background: var(--forest-deep); color: white;">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-12 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-3xl">🌲</span>
+                        <h3 class="text-2xl font-bold">Abadé</h3>
+                    </div>
+                    <p class="opacity-80">Grandir libre, apprendre dehors depuis 2020.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Liens Rapides</h4>
+                    <ul class="space-y-2 opacity-80">
+                        <li><a href="qui-sommes-nous.html" class="hover:underline">Qui sommes-nous?</a></li>
+                        <li><a href="nos-actions.html" class="hover:underline">Nos actions</a></li>
+                        <li><a href="agenda.html" class="hover:underline">Agenda</a></li>
+                        <li><a href="nous-soutenir.html" class="hover:underline">Nous soutenir</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 opacity-80">
+                        <li>📧 contact@abade.org</li>
+                        <li>📞 +33 (0)1 23 45 67 89</li>
+                        <li>📍 Région Parisienne, France</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white border-opacity-20 pt-8 text-center opacity-60">
+                <p>&copy; 2026 Abadé. Tous droits réservés. Créé avec soin pour la nature et les enfants.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
