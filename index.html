@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abadé - Nature Education for Kids</title>
+    <title>Abadé : pour une enfance en nature</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --forest-deep: #1a3a2e;
-            --moss-green: #4a7c59;
+            --forest-deep: #2d5a45;
+            --moss-green: #6b9b7a;
             --sun-gold: #f4a261;
             --earth-brown: #8b4513;
-            --sky-blue: #a8dadc;
+            --sky-blue: #b8e0d2;
             --cream: #faf8f3;
         }
 
@@ -190,10 +190,13 @@
     <!-- Navigation -->
     <nav class="relative z-10 px-6 py-6">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <span class="text-3xl">🌲</span>
-                <h1 class="text-2xl font-bold text-forest-deep" style="color: var(--forest-deep);">Abadé</h1>
-            </div>
+            <a href="index.html" class="flex items-center space-x-2">
+                <span class="text-3xl">🌿</span>
+                <div class="leading-tight">
+                    <div class="text-2xl font-bold" style="font-family: 'Crimson Pro', serif; color: var(--forest-deep);">Abadé</div>
+                    <div class="text-xs" style="font-family: 'DM Sans', sans-serif; color: var(--forest-deep); opacity: 0.7;">Pour une enfance en nature.</div>
+                </div>
+            </a>
             <div class="hidden md:flex space-x-8">
                 <a href="qui-sommes-nous.html" class="text-forest-deep hover:text-moss-green transition-colors font-medium">Qui sommes-nous?</a>
                 <a href="nos-actions.html" class="text-forest-deep hover:text-moss-green transition-colors font-medium">Nos actions</a>
@@ -235,21 +238,21 @@
         <div class="max-w-6xl mx-auto text-center relative z-10">
             <div class="fade-in">
                 <h1 class="text-6xl md:text-8xl font-bold mb-6 leading-tight" style="color: var(--forest-deep);">
-                    Growing Wild,<br/>
-                    <span style="color: var(--moss-green);">Learning Free</span>
+                    Grandir dehors,<br/>
+                    <span style="color: var(--moss-green);">Apprendre librement</span>
                 </h1>
             </div>
-            
+
             <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto fade-in fade-in-delay-1" style="color: var(--forest-deep); opacity: 0.8;">
-                We take children into nature where they discover, explore, and grow through hands-on outdoor experiences that spark curiosity and wonder.
+                Nous accompagnons les enfants dans la nature pour leur permettre de découvrir, explorer et grandir à travers des expériences en plein air qui éveillent la curiosité et l'émerveillement.
             </p>
-            
+
             <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in fade-in-delay-2">
-                <button class="btn-primary">Join Our Programs</button>
-                <button class="px-8 py-4 border-2 rounded-full font-semibold transition-all hover:bg-forest-deep hover:text-white" 
+                <a href="nos-actions.html" class="btn-primary">Découvrir nos activités</a>
+                <a href="qui-sommes-nous.html" class="px-8 py-4 border-2 rounded-full font-semibold transition-all hover:bg-forest-deep hover:text-white"
                         style="border-color: var(--forest-deep); color: var(--forest-deep);">
-                    Learn More
-                </button>
+                    En savoir plus
+                </a>
             </div>
         </div>
     </section>
@@ -260,37 +263,37 @@
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div class="leaf-accent">
                     <h2 class="text-5xl font-bold mb-6" style="color: var(--forest-deep);">
-                        Where Nature Becomes the Classroom
+                        Quand la nature devient l'école
                     </h2>
                     <p class="text-lg mb-6" style="color: var(--forest-deep); opacity: 0.8;">
-                        At Abadé, we believe children thrive when they're connected to the natural world. Our programs blend outdoor adventure with environmental education, fostering resilience, creativity, and a deep love for our planet.
+                        Chez Abadé, nous sommes convaincus que notre relation à la nature joue un rôle essentiel dans notre santé, notre bien-être et notre équilibre. Nos programmes allient aventure en plein air et éducation à l'environnement, favorisant la résilience, la créativité et un amour profond pour le vivant.
                     </p>
                     <p class="text-lg mb-8" style="color: var(--forest-deep); opacity: 0.8;">
-                        From forest schools to seasonal camps, every experience is designed to nurture young minds through exploration, play, and meaningful connection with nature.
+                        Car on n'aime que ce que l'on connaît, et on protège ce que l'on aime. Chaque expérience est conçue pour créer des temps de reconnexion à soi, aux autres et à la nature, tout en transmettant des savoirs liés au vivant.
                     </p>
-                    <button class="btn-primary">Our Philosophy</button>
+                    <a href="qui-sommes-nous.html" class="btn-primary">Notre philosophie</a>
                 </div>
-                
+
                 <div class="grid grid-cols-2 gap-6">
                     <div class="p-6 rounded-3xl" style="background: linear-gradient(135deg, var(--moss-green), var(--forest-deep)); color: white;">
                         <div class="text-5xl mb-4">🌿</div>
                         <h3 class="text-3xl font-bold mb-2">500+</h3>
-                        <p class="opacity-90">Kids Connected to Nature</p>
+                        <p class="opacity-90">Enfants connectés à la nature</p>
                     </div>
                     <div class="p-6 rounded-3xl mt-12" style="background: var(--sun-gold); color: var(--forest-deep);">
                         <div class="text-5xl mb-4">🦋</div>
                         <h3 class="text-3xl font-bold mb-2">50+</h3>
-                        <p class="opacity-90">Species Discovered Together</p>
+                        <p class="opacity-90">Espèces découvertes ensemble</p>
                     </div>
                     <div class="p-6 rounded-3xl -mt-12" style="background: var(--sky-blue); color: var(--forest-deep);">
                         <div class="text-5xl mb-4">⛰️</div>
                         <h3 class="text-3xl font-bold mb-2">12</h3>
-                        <p class="opacity-90">Wild Locations</p>
+                        <p class="opacity-90">Sites naturels explorés</p>
                     </div>
                     <div class="p-6 rounded-3xl" style="background: var(--earth-brown); color: white;">
                         <div class="text-5xl mb-4">🌞</div>
                         <h3 class="text-3xl font-bold mb-2">365</h3>
-                        <p class="opacity-90">Days of Adventure</p>
+                        <p class="opacity-90">Jours d'aventure</p>
                     </div>
                 </div>
             </div>
@@ -302,35 +305,35 @@
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-5xl md:text-6xl font-bold mb-6" style="color: var(--forest-deep);">
-                    Our Programs
+                    Nos activités
                 </h2>
                 <p class="text-xl max-w-3xl mx-auto" style="color: var(--forest-deep); opacity: 0.8;">
-                    Seasonal adventures designed for different ages and interests, all rooted in experiential learning and outdoor exploration.
+                    Des aventures au fil des saisons, conçues pour différents âges et centres d'intérêt, toutes ancrées dans l'apprentissage par l'expérience et l'exploration en plein air.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <div class="activity-card bg-white rounded-3xl p-8 shadow-lg">
                     <div class="text-6xl mb-6">🏕️</div>
-                    <h3 class="text-2xl font-bold mb-4" style="color: var(--forest-deep);">Forest School</h3>
+                    <h3 class="text-2xl font-bold mb-4" style="color: var(--forest-deep);">École de la forêt</h3>
                     <p class="mb-6" style="color: var(--forest-deep); opacity: 0.8;">
-                        Weekly sessions where children build shelters, track wildlife, and learn primitive skills in our woodland classroom.
+                        Des séances régulières où les enfants construisent des cabanes, observent la faune et apprennent des savoir-faire ancestraux dans notre salle de classe en pleine nature.
                     </p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm font-semibold" style="color: var(--moss-green);">Ages 5-12</span>
-                        <button class="text-sm font-semibold hover:underline" style="color: var(--forest-deep);">Learn More →</button>
+                        <span class="text-sm font-semibold" style="color: var(--moss-green);">5-12 ans</span>
+                        <a href="nos-actions.html" class="text-sm font-semibold hover:underline" style="color: var(--forest-deep);">En savoir plus →</a>
                     </div>
                 </div>
 
                 <div class="activity-card bg-white rounded-3xl p-8 shadow-lg">
                     <div class="text-6xl mb-6">🌾</div>
-                    <h3 class="text-2xl font-bold mb-4" style="color: var(--forest-deep);">Seasonal Camps</h3>
+                    <h3 class="text-2xl font-bold mb-4" style="color: var(--forest-deep);">Camps saisonniers</h3>
                     <p class="mb-6" style="color: var(--forest-deep); opacity: 0.8;">
-                        Intensive week-long immersions during school breaks, featuring camping, hiking, and nature-based crafts.
+                        Des immersions d'une semaine pendant les vacances scolaires, avec camping, randonnées et activités créatives inspirées par la nature.
                     </p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm font-semibold" style="color: var(--moss-green);">Ages 6-15</span>
-                        <button class="text-sm font-semibful hover:underline" style="color: var(--forest-deep);">Learn More →</button>
+                        <span class="text-sm font-semibold" style="color: var(--moss-green);">6-15 ans</span>
+                        <a href="nos-actions.html" class="text-sm font-semibold hover:underline" style="color: var(--forest-deep);">En savoir plus →</a>
                     </div>
                 </div>
             </div>
@@ -368,52 +371,52 @@
     <section id="contact" class="relative py-24 px-6" style="background: linear-gradient(135deg, var(--moss-green), var(--forest-deep));">
         <div class="max-w-4xl mx-auto text-center text-white">
             <h2 class="text-5xl md:text-6xl font-bold mb-6">
-                Ready to Explore?
+                Prêts à explorer ?
             </h2>
             <p class="text-xl mb-12 opacity-90">
-                Join us for a trial session and see your child discover the wonder of the natural world.
+                Rejoignez-nous pour une séance découverte et laissez votre enfant faire l'expérience des bienfaits de la nature.
             </p>
-            
+
             <div class="bg-white rounded-3xl p-8 md:p-12 text-left max-w-2xl mx-auto">
                 <form class="space-y-6">
                     <div>
-                        <label class="block text-sm font-semibold mb-2" style="color: var(--forest-deep);">Parent/Guardian Name</label>
-                        <input type="text" class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:border-moss-green" 
-                               style="border-color: #e0e0e0; color: var(--forest-deep);" placeholder="Your name">
+                        <label class="block text-sm font-semibold mb-2" style="color: var(--forest-deep);">Nom du parent/tuteur</label>
+                        <input type="text" class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:border-moss-green"
+                               style="border-color: #e0e0e0; color: var(--forest-deep);" placeholder="Votre nom">
                     </div>
-                    
+
                     <div>
                         <label class="block text-sm font-semibold mb-2" style="color: var(--forest-deep);">Email</label>
-                        <input type="email" class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:border-moss-green" 
-                               style="border-color: #e0e0e0; color: var(--forest-deep);" placeholder="your@email.com">
+                        <input type="email" class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:border-moss-green"
+                               style="border-color: #e0e0e0; color: var(--forest-deep);" placeholder="votre@email.com">
                     </div>
-                    
+
                     <div>
-                        <label class="block text-sm font-semibold mb-2" style="color: var(--forest-deep);">Child's Age</label>
-                        <input type="number" class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:border-moss-green" 
-                               style="border-color: #e0e0e0; color: var(--forest-deep);" placeholder="Age">
+                        <label class="block text-sm font-semibold mb-2" style="color: var(--forest-deep);">Âge de l'enfant</label>
+                        <input type="number" class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:border-moss-green"
+                               style="border-color: #e0e0e0; color: var(--forest-deep);" placeholder="Âge">
                     </div>
-                    
+
                     <div>
-                        <label class="block text-sm font-semibold mb-2" style="color: var(--forest-deep);">Interested Program</label>
-                        <select class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:border-moss-green" 
+                        <label class="block text-sm font-semibold mb-2" style="color: var(--forest-deep);">Programme souhaité</label>
+                        <select class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:border-moss-green"
                                 style="border-color: #e0e0e0; color: var(--forest-deep);">
-                            <option>Forest School</option>
-                            <option>Stream Explorers</option>
-                            <option>Seasonal Camps</option>
-                            <option>Not sure yet</option>
+                            <option>École de la forêt</option>
+                            <option>Explorateurs de ruisseaux</option>
+                            <option>Camps saisonniers</option>
+                            <option>Je ne sais pas encore</option>
                         </select>
                     </div>
-                    
+
                     <div>
-                        <label class="block text-sm font-semibold mb-2" style="color: var(--forest-deep);">Message (Optional)</label>
-                        <textarea class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:border-moss-green" 
-                                  style="border-color: #e0e0e0; color: var(--forest-deep);" rows="4" 
-                                  placeholder="Tell us anything you'd like us to know..."></textarea>
+                        <label class="block text-sm font-semibold mb-2" style="color: var(--forest-deep);">Message (Facultatif)</label>
+                        <textarea class="w-full px-4 py-3 rounded-xl border-2 focus:outline-none focus:border-moss-green"
+                                  style="border-color: #e0e0e0; color: var(--forest-deep);" rows="4"
+                                  placeholder="Dites-nous ce que vous souhaitez partager..."></textarea>
                     </div>
-                    
+
                     <button type="submit" class="btn-primary w-full text-lg">
-                        Send Inquiry
+                        Envoyer ma demande
                     </button>
                 </form>
             </div>
@@ -426,10 +429,10 @@
             <div class="grid md:grid-cols-3 gap-12 mb-8">
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
-                        <span class="text-3xl">🌲</span>
+                        <span class="text-3xl">🌿</span>
                         <h3 class="text-2xl font-bold">Abadé</h3>
                     </div>
-                    <p class="opacity-80">Growing wild, learning free since 2020.</p>
+                    <p class="opacity-80">Pour une enfance en nature.</p>
                 </div>
                 
                 <div>
