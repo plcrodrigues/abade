@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nos Actions - Abadé</title>
+    <title>Sensibilisation - Abadé</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,15 +34,6 @@
         h1, h2, h3 {
             font-family: 'Crimson Pro', serif;
             font-weight: 700;
-        }
-
-        .activity-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .activity-card:hover {
-            transform: translateY(-8px) rotate(-1deg);
-            box-shadow: 0 20px 40px rgba(26, 58, 46, 0.15);
         }
 
         .btn-primary {
@@ -125,56 +116,62 @@
         <div class="relative z-10 flex flex-col justify-start h-full px-6 pt-3 md:pt-4" style="min-height: 40vh;">
             <div class="max-w-7xl mx-auto w-full">
                 <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white">
-                    Nos Actions
+                    Sensibilisation
                 </h1>
                 <div class="max-w-2xl text-left text-white" style="font-family: 'Crimson Pro', serif;">
                     <p class="text-2xl md:text-4xl opacity-90">
-                        Des programmes variés pour tous les âges, conçus pour éveiller la curiosité et l'amour de la nature.
+                        Éveiller les consciences pour protéger le vivant, dès le plus jeune âge.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Programs Section -->
+    <!-- Introduction -->
     <section class="relative py-24 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6" style="color: var(--forest-deep);">
-                    Nos Programmes Principaux
-                </h2>
-                <p class="text-xl max-w-3xl mx-auto" style="color: var(--forest-deep); opacity: 0.8;">
-                    Trois axes d'action complémentaires, ancrés dans l'apprentissage expérientiel et l'exploration en plein air.
-                </p>
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center" style="color: var(--forest-deep);">
+                Reconnectons-nous avec la nature !
+            </h2>
+            <p class="text-lg md:text-xl mb-8" style="color: var(--forest-deep); opacity: 0.8;">
+                Au-delà de nos actions directes, nous souhaitons éveiller la curiosité et la conscience écologique du plus grand nombre à travers des actions variées et participatives.
+            </p>
+        </div>
+    </section>
+
+    <!-- Nos Formats -->
+    <section class="relative py-24 px-6" style="background: linear-gradient(to bottom, var(--cream), #e8f5e3);">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">🎉</div>
+                    <h3 class="text-2xl font-bold mb-4" style="color: var(--forest-deep);">Événements ouverts à tous</h3>
+                    <p style="color: var(--forest-deep); opacity: 0.8;">
+                        Des temps de rencontre conviviaux et accessibles pour découvrir, échanger et se mobiliser ensemble autour des enjeux environnementaux.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">🎬</div>
+                    <h3 class="text-2xl font-bold mb-4" style="color: var(--forest-deep);">Films-conférences avec débats</h3>
+                    <p style="color: var(--forest-deep); opacity: 0.8;">
+                        Des projections suivies de discussions pour approfondir notre compréhension des enjeux écologiques et imaginer des pistes d'action.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">🎲</div>
+                    <h3 class="text-2xl font-bold mb-4" style="color: var(--forest-deep);">Animations immersives</h3>
+                    <p style="color: var(--forest-deep); opacity: 0.8;">
+                        Voyage en 2030 Glorieuses, expérience immersive autour de l'eau, jeux pédagogiques... Des formats ludiques et engageants pour tous les publics.
+                    </p>
+                </div>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-                <a href="ecole-comestible.html" class="activity-card bg-white rounded-3xl p-8 shadow-lg block" style="text-decoration: none; color: inherit;">
-                    <div class="text-6xl mb-6">🌱</div>
-                    <h3 class="text-2xl font-bold mb-4" style="color: var(--forest-deep);">École comestible</h3>
-                    <p class="mb-6" style="color: var(--forest-deep); opacity: 0.8;">
-                        Un parcours pédagogique de la graine à l'assiette pour reconnecter les enfants à l'alimentation et au vivant.
-                    </p>
-                    <span class="text-sm font-semibold" style="color: var(--forest-deep);">En savoir plus →</span>
-                </a>
-
-                <a href="sorties-en-nature.html" class="activity-card bg-white rounded-3xl p-8 shadow-lg block" style="text-decoration: none; color: inherit;">
-                    <div class="text-6xl mb-6">🌿</div>
-                    <h3 class="text-2xl font-bold mb-4" style="color: var(--forest-deep);">Sorties en nature</h3>
-                    <p class="mb-6" style="color: var(--forest-deep); opacity: 0.8;">
-                        Des immersions en plein air pour explorer, observer et s'émerveiller au contact de la faune, de la flore et des écosystèmes qui nous entourent.
-                    </p>
-                    <span class="text-sm font-semibold" style="color: var(--forest-deep);">En savoir plus →</span>
-                </a>
-
-                <a href="sensibilisation.html" class="activity-card bg-white rounded-3xl p-8 shadow-lg block" style="text-decoration: none; color: inherit;">
-                    <div class="text-6xl mb-6">🌍</div>
-                    <h3 class="text-2xl font-bold mb-4" style="color: var(--forest-deep);">Sensibilisation</h3>
-                    <p class="mb-6" style="color: var(--forest-deep); opacity: 0.8;">
-                        Des ateliers et interventions pour sensibiliser les enfants et les adultes aux enjeux environnementaux et à la protection de la nature.
-                    </p>
-                    <span class="text-sm font-semibold" style="color: var(--forest-deep);">En savoir plus →</span>
-                </a>
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-lg md:text-xl" style="color: var(--forest-deep); opacity: 0.8;">
+                    Chaque rencontre est l'occasion d'échanger, de questionner nos habitudes et d'inventer ensemble de nouveaux récits pour réinventer notre relation au vivant.
+                </p>
             </div>
         </div>
     </section>
@@ -183,19 +180,19 @@
     <section class="relative py-20 px-6" style="background: linear-gradient(135deg, var(--moss-green), var(--forest-deep));">
         <div class="max-w-4xl mx-auto text-center text-white">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                Prêt à explorer?
+                Vous souhaitez organiser une intervention?
             </h2>
             <p class="text-xl mb-8 opacity-90">
-                Inscrivez votre enfant à une séance d'essai gratuite et découvrez la magie de l'apprentissage en nature.
+                Contactez-nous pour organiser un atelier de sensibilisation dans votre école, votre commune ou votre événement.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="agenda.html">
                     <button class="btn-primary">Voir l'agenda</button>
                 </a>
-                <a href="index.html#contact">
+                <a href="nos-actions.html">
                     <button class="px-8 py-4 bg-white rounded-full font-semibold transition-all hover:bg-opacity-90"
                             style="color: var(--forest-deep);">
-                        Nous contacter
+                        Toutes nos actions
                     </button>
                 </a>
             </div>
@@ -211,7 +208,7 @@
                         <span class="text-3xl">🌿</span>
                         <h3 class="text-2xl font-bold">Abadé</h3>
                     </div>
-                    <p class="opacity-80">Grandir libre, apprendre dehors depuis 2020.</p>
+                    <p class="opacity-80">Pour une enfance en nature.</p>
                 </div>
 
                 <div>
@@ -227,9 +224,8 @@
                 <div>
                     <h4 class="font-bold mb-4">Contact</h4>
                     <ul class="space-y-2 opacity-80">
-                        <li>📧 contact@abade.org</li>
-                        <li>📞 +33 (0)1 23 45 67 89</li>
-                        <li>📍 Région Parisienne, France</li>
+                        <li>📧 contact@abade.fr</li>
+                        <li>📍 Isère, France</li>
                     </ul>
                 </div>
             </div>

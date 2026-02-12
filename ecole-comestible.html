@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'École Comestible - Abadé</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest-deep: #2d5a45;
+            --moss-green: #6b9b7a;
+            --sun-gold: #f4a261;
+            --earth-brown: #8b4513;
+            --sky-blue: #b8e0d2;
+            --cream: #faf8f3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--cream);
+            color: var(--forest-deep);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Crimson Pro', serif;
+            font-weight: 700;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--moss-green), var(--forest-deep));
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(74, 124, 89, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(74, 124, 89, 0.4);
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--cream);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--moss-green);
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--forest-deep);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="relative z-10 px-6 py-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <div class="leading-tight">
+                    <div class="text-5xl font-bold" style="font-family: 'Crimson Pro', serif; color: var(--forest-deep);">Abadé</div>
+                    <div class="text-xs" style="font-family: 'DM Sans', sans-serif; color: var(--forest-deep); opacity: 0.7;">Pour une enfance en nature.</div>
+                </div>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="qui-sommes-nous.html" class="text-forest-deep hover:text-moss-green transition-colors font-medium">Qui sommes-nous?</a>
+                <a href="nos-actions.html" class="text-forest-deep hover:text-moss-green transition-colors font-medium" style="color: var(--moss-green);">Nos actions</a>
+                <a href="agenda.html" class="text-forest-deep hover:text-moss-green transition-colors font-medium">Agenda</a>
+                <a href="nous-soutenir.html" class="text-forest-deep hover:text-moss-green transition-colors font-medium">Nous soutenir</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-forest-deep" style="color: var(--forest-deep);">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-6 pb-6">
+            <div class="flex flex-col space-y-4">
+                <a href="qui-sommes-nous.html" class="font-medium" style="color: var(--forest-deep);">Qui sommes-nous?</a>
+                <a href="nos-actions.html" class="font-medium" style="color: var(--moss-green);">Nos actions</a>
+                <a href="agenda.html" class="font-medium" style="color: var(--forest-deep);">Agenda</a>
+                <a href="nous-soutenir.html" class="font-medium" style="color: var(--forest-deep);">Nous soutenir</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden" style="min-height: 40vh; background: linear-gradient(135deg, var(--moss-green), var(--forest-deep));">
+        <div class="relative z-10 flex flex-col justify-start h-full px-6 pt-3 md:pt-4" style="min-height: 40vh;">
+            <div class="max-w-7xl mx-auto w-full">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white">
+                    L'École Comestible
+                </h1>
+                <div class="max-w-2xl text-left text-white" style="font-family: 'Crimson Pro', serif;">
+                    <p class="text-2xl md:text-4xl opacity-90">
+                        Éduquer à une alimentation saine, soutenable et savoureuse, de la terre à l'assiette.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="relative py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center" style="color: var(--forest-deep);">
+                Un partenariat pour l'éducation alimentaire
+            </h2>
+            <p class="text-lg md:text-xl mb-6 text-center" style="color: var(--forest-deep); opacity: 0.8;">
+                Abadé s'associe à <strong>L'École Comestible</strong>, association nationale fondée en 2019 et reconnue d'intérêt général, pour déployer des programmes d'éducation alimentaire dans les écoles de la région grenobloise. Inspirée par l'Edible Schoolyard Project d'Alice Waters, elle fédère chercheurs, enseignants, diététiciens, chefs et agriculteurs autour d'une conviction : on peut changer le monde par la manière dont on mange.
+            </p>
+            <p class="text-lg md:text-xl text-center" style="color: var(--forest-deep); opacity: 0.8;">
+                L'approche repose sur l'apprentissage par le faire — <em>« la bouche pleine et les mains sales »</em> — où les enfants découvrent l'alimentation de la terre à l'assiette à travers des expériences concrètes et sensorielles.
+            </p>
+        </div>
+    </section>
+
+    <!-- Program Details -->
+    <section class="relative py-24 px-6" style="background: linear-gradient(to bottom, var(--cream), #e8f5e3);">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-center" style="color: var(--forest-deep);">
+                Les Ateliers
+            </h2>
+            <p class="text-lg text-center mb-16" style="color: var(--forest-deep); opacity: 0.8;">
+                Chaque programme comprend 3 ateliers fondamentaux complétés par un atelier thématique au choix — soit 4 séances de 1h30 par classe.
+            </p>
+
+            <h3 class="text-2xl font-bold mb-8 text-center" style="color: var(--forest-deep);">Socle de base</h3>
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">🥕</div>
+                    <h3 class="text-2xl font-bold mb-4" style="color: var(--forest-deep);">La Cagette de Saison</h3>
+                    <p style="color: var(--forest-deep); opacity: 0.8;">
+                        Découverte des fruits et légumes de saison, leurs cycles de production et leurs bienfaits.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">👅</div>
+                    <h3 class="text-2xl font-bold mb-4" style="color: var(--forest-deep);">Goûts et Sens</h3>
+                    <p style="color: var(--forest-deep); opacity: 0.8;">
+                        Éveil sensoriel et découverte des saveurs à travers des dégustations et expériences gustatives.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">🌱</div>
+                    <h3 class="text-2xl font-bold mb-4" style="color: var(--forest-deep);">De la Graine au Légume</h3>
+                    <p style="color: var(--forest-deep); opacity: 0.8;">
+                        Comprendre le cycle de vie des plantes, de la graine à la récolte.
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-bold mb-8 text-center" style="color: var(--forest-deep);">Ateliers thématiques (1 au choix)</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">🌿</div>
+                    <h3 class="text-xl font-bold mb-4" style="color: var(--forest-deep);">Épices et Aromates</h3>
+                    <p style="color: var(--forest-deep); opacity: 0.8;">
+                        Classe aromatiques, épices du monde.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">🍝</div>
+                    <h3 class="text-xl font-bold mb-4" style="color: var(--forest-deep);">Goûts d'Ici et d'Ailleurs</h3>
+                    <p style="color: var(--forest-deep); opacity: 0.8;">
+                        Atelier pasta, recettes d'ailleurs, atelier pain.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">🍳</div>
+                    <h3 class="text-xl font-bold mb-4" style="color: var(--forest-deep);">Aux Fourneaux !</h3>
+                    <p style="color: var(--forest-deep); opacity: 0.8;">
+                        Anti-gaspi créatif, fermentation, cuisine saine et gourmande.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-lg">
+                    <div class="text-4xl mb-4">🪴</div>
+                    <h3 class="text-xl font-bold mb-4" style="color: var(--forest-deep);">Au Potager !</h3>
+                    <p style="color: var(--forest-deep); opacity: 0.8;">
+                        Semis et plantation, entretien du jardin, paillage et compost.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publics -->
+    <section class="relative py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center" style="color: var(--forest-deep);">
+                Les Publics Concernés
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="flex items-start">
+                    <span class="text-3xl mr-4">👧</span>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2" style="color: var(--forest-deep);">Les Enfants</h3>
+                        <p style="color: var(--forest-deep); opacity: 0.8;">Élèves d'écoles primaires (6–11 ans), bénéficiaires directs des ateliers pratiques et sensoriels.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-3xl mr-4">👩‍🏫</span>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2" style="color: var(--forest-deep);">Les Enseignants</h3>
+                        <p style="color: var(--forest-deep); opacity: 0.8;">Formés et accompagnés dans la mise en oeuvre du programme éducatif.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-3xl mr-4">👨‍👩‍👧</span>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2" style="color: var(--forest-deep);">Les Familles</h3>
+                        <p style="color: var(--forest-deep); opacity: 0.8;">Ateliers parents-enfants pour prolonger l'apprentissage à la maison.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-3xl mr-4">🏫</span>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2" style="color: var(--forest-deep);">Les Agents Scolaires</h3>
+                        <p style="color: var(--forest-deep); opacity: 0.8;">Animateurs périscolaires et agents de cantine, pour une cohérence éducative globale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-20 px-6" style="background: linear-gradient(135deg, var(--moss-green), var(--forest-deep));">
+        <div class="max-w-4xl mx-auto text-center text-white">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                Intéressé par ce programme ?
+            </h2>
+            <p class="text-xl mb-8 opacity-90">
+                Contactez-nous pour en savoir plus sur le déploiement de L'École Comestible dans votre école ou votre quartier.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#contact">
+                    <button class="btn-primary">Nous contacter</button>
+                </a>
+                <a href="nos-actions.html">
+                    <button class="px-8 py-4 bg-white rounded-full font-semibold transition-all hover:bg-opacity-90"
+                            style="color: var(--forest-deep);">
+                        Toutes nos actions
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative py-12 px-6" style="background: var(--forest-deep); color: white;">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-12 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-3xl">🌿</span>
+                        <h3 class="text-2xl font-bold">Abadé</h3>
+                    </div>
+                    <p class="opacity-80">Pour une enfance en nature.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Liens Rapides</h4>
+                    <ul class="space-y-2 opacity-80">
+                        <li><a href="qui-sommes-nous.html" class="hover:underline">Qui sommes-nous?</a></li>
+                        <li><a href="nos-actions.html" class="hover:underline">Nos actions</a></li>
+                        <li><a href="agenda.html" class="hover:underline">Agenda</a></li>
+                        <li><a href="nous-soutenir.html" class="hover:underline">Nous soutenir</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 opacity-80">
+                        <li>📧 contact@abade.fr</li>
+                        <li>📍 Isère, France</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white border-opacity-20 pt-8 text-center opacity-60">
+                <p>&copy; 2026 Abadé. Tous droits réservés. Créé avec soin pour la nature et les enfants.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

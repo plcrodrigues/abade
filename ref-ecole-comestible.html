@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'École Comestible - Abadé</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fafafa;
+        }
+
+        header {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2d5f3f;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #2d5f3f;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #4a7c59 0%, #2d5f3f 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .intro {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        h2 {
+            color: #2d5f3f;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .content-section {
+            background: white;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .content-section h3 {
+            color: #2d5f3f;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .content-section p {
+            color: #555;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #4a7c59;
+        }
+
+        .feature-card h4 {
+            color: #2d5f3f;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .feature-card p, .feature-card ul {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .feature-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .feature-card li {
+            padding: 0.3rem 0;
+        }
+
+        .feature-card li::before {
+            content: "• ";
+            color: #4a7c59;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .program-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .program-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .program-item h4 {
+            color: #2d5f3f;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .program-item p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .program-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .program-item li {
+            color: #666;
+            padding: 0.3rem 0;
+            font-size: 0.9rem;
+        }
+
+        .program-item li::before {
+            content: "→ ";
+            color: #4a7c59;
+            margin-right: 0.5rem;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, #4a7c59 0%, #2d5f3f 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            background: white;
+            color: #2d5f3f;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: #2d5f3f;
+            color: white;
+            padding: 2.5rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #8bc34a;
+            font-size: 1.1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            display: block;
+            padding: 0.3rem 0;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">🌿 Abadé</a>
+            <ul class="nav-links">
+                <li><a href="qui-sommes-nous.html">Qui sommes-nous?</a></li>
+                <li><a href="nos-actions.html">Nos actions</a></li>
+                <li><a href="agenda.html">Agenda</a></li>
+                <li><a href="nous-soutenir.html">Nous soutenir</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>L'École Comestible</h1>
+        <p>Un partenariat avec une association nationale pour éduquer à une alimentation saine, soutenable et savoureuse</p>
+    </div>
+
+    <div class="container">
+        <div class="intro">
+            <p>Abadé s'associe à <strong>L'École Comestible</strong>, une association nationale fondée en 2019 et reconnue d'intérêt général, pour développer des programmes d'éducation alimentaire dans les écoles de la région grenobloise.</p>
+            <p>Inspirée par l'Edible Schoolyard Project d'Alice Waters en Californie, L'École Comestible fédère un collectif d'experts (chercheurs INRAE et CNRS, enseignants, diététiciens, chefs, agriculteurs) autour d'une conviction : on peut changer le monde par la manière dont on mange, et tout commence dès l'enfance.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>🌱 Le Concept</h2>
+            <p>L'École Comestible propose une approche pédagogique unique basée sur l'apprentissage par le faire, résumée par la formule <em>"la bouche pleine et les mains sales"</em>. Les enfants découvrent l'alimentation de la terre à l'assiette à travers des expériences concrètes et sensorielles.</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h4>🎯 Mission</h4>
+                    <p>Reconnecter les enfants à la nature, à leurs sens et à leur nourriture, pour faire de l'alimentation un sujet fondamental à l'école et améliorer l'alimentation des citoyens de demain.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🤝 Méthodologie</h4>
+                    <ul>
+                        <li>Apprentissage par le "faire ensemble"</li>
+                        <li>Parcours de la terre à l'assiette</li>
+                        <li>4 ateliers par classe de 1h30</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>🥗 Cuisine saine</h4>
+                    <ul>
+                        <li>Valorisation du végétal</li>
+                        <li>Produits bruts, locaux et de saison</li>
+                        <li>Ateliers parents-enfants</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>📚 Les Activités Proposées</h2>
+            <p>Chaque programme comprend un socle de base de 3 ateliers fondamentaux, complété par un atelier au choix parmi différentes thématiques.</p>
+
+            <h3>Socle de base (3 ateliers)</h3>
+            <div class="features">
+                <div class="feature-card">
+                    <h4>La Cagette de Saison</h4>
+                    <p>Découverte des fruits et légumes de saison, leurs cycles de production et leurs bienfaits.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Goûts et Sens</h4>
+                    <p>Éveil sensoriel et découverte des saveurs à travers des dégustations et expériences gustatives.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>De la Graine au Légume</h4>
+                    <p>Comprendre le cycle de vie des plantes, de la graine à la récolte.</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 2rem;">Ateliers thématiques (1 au choix)</h3>
+            <div class="program-grid">
+                <div class="program-item">
+                    <h4>🌿 Épices et Aromates</h4>
+                    <ul>
+                        <li>La classe aromatiques</li>
+                        <li>Les épices du monde</li>
+                    </ul>
+                </div>
+                <div class="program-item">
+                    <h4>🍝 Goûts d'Ici et d'Ailleurs</h4>
+                    <ul>
+                        <li>Atelier pasta</li>
+                        <li>Recettes d'ailleurs</li>
+                        <li>Atelier pain</li>
+                    </ul>
+                </div>
+                <div class="program-item">
+                    <h4>🍳 Aux Fourneaux !</h4>
+                    <ul>
+                        <li>Anti-gaspi créatif</li>
+                        <li>Fermentation</li>
+                        <li>Cuisine saine et gourmande</li>
+                    </ul>
+                </div>
+                <div class="program-item">
+                    <h4>🌱 Au Potager !</h4>
+                    <ul>
+                        <li>Semis et plantation</li>
+                        <li>Entretien du jardin</li>
+                        <li>Paillage et compost</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>👥 Les Publics Concernés</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <h4>👧 Les Enfants</h4>
+                    <p>Élèves d'écoles primaires publiques, entre 6 et 11 ans. Bénéficiaires directs des ateliers pratiques et sensoriels.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>👩‍🏫 Les Enseignants</h4>
+                    <p>Formés et accompagnés dans la mise en œuvre du programme. Partie prenante du projet éducatif.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>👨‍👩‍👧 Les Familles</h4>
+                    <p>Participation aux ateliers parents-enfants pour renforcer le lien et prolonger l'apprentissage à la maison.</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🏫 Les Agents Scolaires</h4>
+                    <p>Animateurs périscolaires et agents de cantine, pour une cohérence éducative globale.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h2>Intéressé par ce programme ?</h2>
+            <p>Contactez-nous pour en savoir plus sur le déploiement de L'École Comestible dans votre école ou votre quartier.</p>
+            <a href="index.html#contact" class="btn">Nous contacter</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>🌿 Abadé</h4>
+                <p>Pour une enfance en nature.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Liens Rapides</h4>
+                <ul>
+                    <li><a href="qui-sommes-nous.html">Qui sommes-nous?</a></li>
+                    <li><a href="nos-actions.html">Nos actions</a></li>
+                    <li><a href="ecole-comestible.html">L'École Comestible</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="nous-soutenir.html">Nous soutenir</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li>📧 contact@abade.org</li>
+                    <li>📞 +33 (0)1 23 45 67 89</li>
+                    <li>📍 Région Grenobloise, France</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 Abadé. Tous droits réservés. Créé avec soin pour la nature et les enfants.
+        </div>
+    </footer>
+</body>
+</html>
